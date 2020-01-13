@@ -1,0 +1,76 @@
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    width: 95%;
+    margin: auto;
+}
+    
+.routes { 
+    grid-area: 1 / 1 / 4 / 4; 
+    padding: 5px; 
+}
+.sample-data { 
+    grid-area: 1 / 4 / 4 / 6; 
+    justify-self: center;
+}
+.about { 
+    grid-area: 4 / 1 / 6 / 6; 
+    border: 2px, solid, grey;
+    padding-top: 15px;
+}
+
+body {
+	margin-top:0px;
+    font: 16px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+}
+
+table tr td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+
+header {
+	position: relative;
+	padding: 50px 15px 0 15px;
+	color: #444;
+	text-align: left;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+	background-color: #A4DFDA;
+	margin-bottom:60px;
+}
+
+h1 {
+	font-size: 85px;
+	line-height: 1.3em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 45px;
+	line-height: 1.3em;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 30px;
+	line-height: 1.3em;
+	margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+ text-decoration: underline;
+}
+
+@media (max-width:700px){
+	h1{font-size:36px;}
+	h2{font-size:28px;}
+}
