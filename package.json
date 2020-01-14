@@ -28,7 +28,7 @@
     "express": "^4.17.1",
     "mongodb": "^3.4.1",
     "mongoose": "^5.8.6",
-    "superagent-retry": "^0.6.0",
-    "superagent-retry-delay": "^2.4.2"
+    "superagent-retry-delay": "^2.4.2",
+    "superagent-throttle": "^1.0.1"
   }
 }
