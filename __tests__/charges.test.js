@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const request = require('supertest');
 const app = require('../lib/app');
-const Charge = require('../lib/models/Charge');
+const Charge = require('../lib/models/Case');
 const connect = require('../lib/utils/connect');
 const mongoose = require('mongoose');
 

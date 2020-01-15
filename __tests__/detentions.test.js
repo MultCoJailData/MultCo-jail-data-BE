@@ -40,22 +40,22 @@ describe('app routes', () => {
       bookingStates: [
         {
           type: mongoose.Schema.Types.ObjectId, 
-          ref: 'Booking'
+          ref: 'BookingState'
         }
       ],
       caseStates: [
         {
           type: mongoose.Schema.Types.ObjectId, 
-          ref: 'Case'
+          ref: 'CourtCase'
         }
       ],
       currentBookingState:     {
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Booking'
+        ref: 'BookingState'
       },
       currentCaseState:     {
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Case'
+        ref: 'CourtCase'
       }
     });
   });
