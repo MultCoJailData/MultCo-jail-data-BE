@@ -1,11 +1,11 @@
 require('dotenv').config();
 
-const Booking = require('./Booking');
-const Charge = require('./Charge');
+const Booking = require('../models/BookingState');
+const Charge = require('../models/Charge');
 const connect = require('../utils/connect');
 const mongoose = require('mongoose');
-// const fs = require('fs').promises;
-// const scrapeHTML = require('../scripts/scrape-html');
+const fs = require('fs').promises;
+const scrapeHTML = require('../scripts/scrape-html');
 
 describe('booking model', () => {
   beforeAll(() => {
@@ -55,17 +55,7 @@ describe('booking model', () => {
   //   console.log(scrapeObject);
   //   const charge = await Charge.create(scrapeObject);
   //   return expect(charge.toObject()).toEqual({
-  //     _id: charge._id,
-  //     fullName: 'Doe, John',
-  //     age: '58',
-  //     gender: 'Male',
-  //     race: 'Black',
-  //     height: '6 ft 0 in',
-  //     weight: '200 lbs',
-  //     hairColor: 'XXX',
-  //     eyeColor: 'Brown',
-  //     swisId: '12345',
-  //     __v: 0
+
   //   });
   // });
 });
