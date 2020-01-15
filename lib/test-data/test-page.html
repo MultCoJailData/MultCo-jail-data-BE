@@ -24,7 +24,7 @@
                     <div class="separator-line-menu"></div>
                     <div class="clear"></div>
                     <li><a href="http://www.mcso.us">MCSO Home</a></li>
-					
+
                 </ul>
             </div>
             <div id="logo">
@@ -37,27 +37,27 @@
 </p>
         </div>
         <!-- END LEFT -->
-        <!-- RIGHT -->		
+        <!-- RIGHT -->
         <div id="right">
             <div class="page">
-                
+
 
 <h2>Booking Information</h2>
 
 <input id="BookingNumber" name="BookingNumber" type="hidden" value="1489454" />
 
 <article>
-    
+
     <div id="booking-detail">
         <table class="table table-condensed table-responsive">
             <tbody>
                 <tr>
                     <td><label for="Person_SwisID">SWIS ID</label></td>
-                    <td>23616</td>
+                    <td>12345</td>
                 </tr>
                 <tr>
                     <td><label for="Person_FullName">Name</label></td>
-                    <td>Abraham, Dwayne Edward</td>
+                    <td>Doe, John</td>
                 </tr>
                 <tr>
                     <td><label for="Person_Age">Age</label></td>
@@ -103,16 +103,16 @@
                     <td><label for="ProjectedReleaseDateTime">Projected Release Date</label></td>
                     <td>Unknown</td>
                 </tr>
-                
+
             </tbody>
         </table>
     </div>
-       
+
     <h3 class="charges">Charges</h3>
-    
+
     <p id="charges-help">Click on each court case number to expand the display and see the charges.</p>
 
-    <div id="charge-info">      
+    <div id="charge-info">
             <h3>
                 <span class="court-case-number">Court Case No. <b>19CR27952</b></span>
                 <span class="da-case-number">DA Case No. <b>2401669</b></span>
@@ -127,8 +127,22 @@
                         </li>
                 </ol>
             </div>
-    </div>
-    
+                <h3>
+                    <span class="court-case-number">Court Case No. <b>18CR27952</b></span>
+                    <span class="da-case-number">DA Case No. <b>2401669</b></span>
+                    <span class="citation-number">Citation No. <b>None</b></span>
+                </h3>
+                <div>
+                    <ol>
+                            <li>
+                                <span class="charge-description-display">THEFT I (C Felony)</span>
+                                <p class="charge-bail-display">Bail: <span class="charge-bail-value">$5,000</span></p>
+                                <p class="charge-status-display">Status: <span class="charge-status-value">Unsentenced</span></p>
+                            </li>
+                    </ol>
+                </div>
+
+
     <span class="bail-disclaimer">Bail required could be the full amount or 10% of the full amount.</span>
 
 </article>
@@ -148,12 +162,12 @@
         <script src="/PAID/bundles/jquery?v=gkWyJthHPtwkFjvHuNinBjchIfwLwc_KbE-H26J2kAI1"></script>
 
         <script src="/PAID/bundles/jqueryui?v=nmuMA-O4C0zphhL2ApoyudBi4v4VCXr0cCFlFmBK2eU1"></script>
-        
+
         <script src="/PAID/bundles/extras?v=nRN5W-34n1hS_w1ciMaiBLXZd-jobHRMbQ7b5h9VaWw1"></script>
 
         <script src="/PAID/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
 
-        
+
     <script type="text/javascript">
         $(function () {
 
@@ -244,18 +258,18 @@
                 var s = b.style;
                 var ieVersion = null;
                 var property;
- 
- 
+
+
                 // Test IE11 properties
                 for (var i = 0; i < ie11Styles.length; i++) {
                     property = ie11Styles[i];
- 
+
                     if (s[property] != undefined) {
                         ieVersion = "ie11";
- 
+
                     }
                 }
- 
+
                 if (ieVersion) {
                     return "Explorer";
                 } else {
