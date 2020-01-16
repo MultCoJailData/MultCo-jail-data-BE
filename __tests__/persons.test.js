@@ -20,9 +20,8 @@ describe('app routes', () => {
   beforeEach(async() => {
     person = await Person.create({
       swisId: '12345678',
-      fullName: 'John Doe',
       age: '39',
-      gender: 'male',
+      gender: 'female',
       race: 'White',
       height: '5\' 6"',
       weight: '160 lbs',
@@ -36,25 +35,33 @@ describe('app routes', () => {
   });
 
   it('gets all persons', async() => {
-    const persons = await Person.create([
-      {
-        swisId: '12345678',
-        fullName: 'Jane Doe',
-        age: '39',
-        gender: 'female',
-        race: 'White',
-        height: '5\' 6"',
-        weight: '160 lbs',
-        hairColor: 'Brown',
-        eyeColor: 'Green'
-      }
-    ]);
+    // const persons = await Person.create([
+    //   {
+    //     swisId: '12345678',
+    //     age: '39',
+    //     gender: 'female',
+    //     race: 'White',
+    //     height: '5\' 6"',
+    //     weight: '160 lbs',
+    //     hairColor: 'Brown',
+    //     eyeColor: 'Green'
+    //   }
+    // ]);
     return request(app)
       .get('/api/v1/persons')
       .then(res => {
-        persons.forEach(person => {
-          expect(res.body).toContainEqual(JSON.parse(JSON.stringify(person)));
-        });
+        
+        expect(res.body).toEqual([{
+          __v:0,
+          _id: person._id,
+          age: '39',
+          gender: 'female',
+          race: 'White',
+          height: '5\' 6"',
+          weight: '160 lbs',
+          hairColor: 'Brown',
+          eyeColor: 'Green'
+        }]);
       });
   });
 
@@ -63,17 +70,15 @@ describe('app routes', () => {
       .get(`/api/v1/persons/${person._id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String),
-          swisId: '12345678',
-          fullName: 'John Doe',
+          __v:0,
+          _id: person._id,
           age: '39',
-          gender: 'male',
+          gender: 'female',
           race: 'White',
           height: '5\' 6"',
           weight: '160 lbs',
           hairColor: 'Brown',
-          eyeColor: 'Green',
-          __v: 0
+          eyeColor: 'Green'
         });
       });
   });
