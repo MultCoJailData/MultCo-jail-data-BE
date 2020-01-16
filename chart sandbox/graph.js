@@ -7,9 +7,11 @@ var data = [
 ];
 
 // create a chart
+// eslint-disable-next-line
 const chart = anychart.bar();
 
 // create a bar series and set the data
+// eslint-disable-next-line
 var series = chart.bar(data);
 
 // set the container id
