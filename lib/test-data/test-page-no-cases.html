@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Booking</title>
+        <meta charset="utf-8" />
+        <link href="/PAID/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="/PAID/Content/css?v=COGHXt-noTNgwBgx5Lbu0X0xQaGEz1CWfmDfC9_BzYk1" rel="stylesheet"/>
+
+        <link href="/PAID/Content/themes/base/css?v=fAM1zRYlUrtFPJ1hYxzbbjAK2XqScGhGGC6_5y6J0Js1" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <!-- LEFT -->
+        <div id = "left-cont">
+            <div id="left" class="left-one" style = "display:block;">
+                <div id="login">
+<a href="/PAID/Account/Login" id="loginLink">Login</a></div>
+                <ul id="navone" class="menu">
+                    <li><a href="/PAID/">Bookings</a></li>
+                    <li><a href="/PAID/Home/CivilCaseStatusSearch">Civil Cases</a></li>
+                    <li><a href="/PAID/Home/InmateDataFaq">Inmate Data FAQ</a></li>
+                    <li><a href="/PAID/Home/CivilFaq">Civil Process FAQ</a></li>
+                    <div class="separator-line-menu"></div>
+                    <div class="clear"></div>
+                    <li><a href="http://www.mcso.us">MCSO Home</a></li>
+
+                </ul>
+            </div>
+            <div id="logo">
+                <h1><a href="/PAID/">MCSO</a></h1>
+                <p>Online Inmate Data</p>
+            </div>
+            <p id="copyright">    <span><a href="/PAID/Home/Disclaimer">Disclaimer</a></span><br />
+    &copy; 2020. All Rights Reserved.&nbsp;&nbsp;
+    v.4.2.26458.120
+</p>
+        </div>
+        <!-- END LEFT -->
+        <!-- RIGHT -->
+        <div id="right">
+            <div class="page">
+
+
+<h2>Booking Information</h2>
+
+<input id="BookingNumber" name="BookingNumber" type="hidden" value="1489454" />
+
+<article>
+
+    <div id="booking-detail">
+        <table class="table table-condensed table-responsive">
+            <tbody>
+                <tr>
+                    <td><label for="Person_SwisID">SWIS ID</label></td>
+                    <td>12345</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_FullName">Name</label></td>
+                    <td>Doe, John</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_Age">Age</label></td>
+                    <td>58</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_Gender">Gender</label></td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_Race">Race</label></td>
+                    <td>Black</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_Height">Height</label></td>
+                    <td>6 ft 0 in</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_Weight">Weight</label></td>
+                    <td>200 lbs</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_HairColor">Hair</label></td>
+                    <td>XXX</td>
+                </tr>
+                <tr>
+                    <td><label for="Person_EyeColor">Eyes</label></td>
+                    <td>Brown</td>
+                </tr>
+                <tr>
+                    <td><label for="ArrestingAgency">Arresting Agency</label></td>
+                    <td>MCSO Transports</td>
+                </tr>
+                <tr>
+                    <td><label for="BookingDateTime">Booking Date</label></td>
+                    <td>12/11/2019 09:29 PM</td>
+                </tr>
+                <tr>
+                    <td><label for="AssignedFacility">Assigned Facility</label></td>
+                    <td>MCDC</td>
+                </tr>
+                <tr>
+                    <td><label for="ProjectedReleaseDateTime">Projected Release Date</label></td>
+                    <td>Unknown</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <h3 class="charges">Charges</h3>
+
+    <p id="charges-help">Click on each court case number to expand the display and see the charges.</p>
+
+    <div id="charge-info">
+    </div>
+
+
+    <span class="bail-disclaimer">Bail required could be the full amount or 10% of the full amount.</span>
+
+</article>
+
+<aside>
+
+    <img class="margin-left-10" id="mugshot-image" src="/PAID/Images/person-loading.gif" alt="Photo"/>
+    <div class="margin-left-10" id="mugshot-image-high-resolution">
+    </div>
+</aside>
+
+
+
+            </div>
+        </div>
+        <!-- END RIGHT -->
+        <script src="/PAID/bundles/jquery?v=gkWyJthHPtwkFjvHuNinBjchIfwLwc_KbE-H26J2kAI1"></script>
+
+        <script src="/PAID/bundles/jqueryui?v=nmuMA-O4C0zphhL2ApoyudBi4v4VCXr0cCFlFmBK2eU1"></script>
+
+        <script src="/PAID/bundles/extras?v=nRN5W-34n1hS_w1ciMaiBLXZd-jobHRMbQ7b5h9VaWw1"></script>
+
+        <script src="/PAID/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            BrowserDetect.init();
+
+            $("#mugshot-image-high-resolution").hide();
+            $("#mugshot-image-back").hide();
+            $("#mugshot-image-high-resolution").delay(5000).show("slow");
+
+            // display charges and counts
+            $("#charge-info").accordion({
+                event: "click",
+                heightStyle: "content"
+            });
+
+            var randomNumber = Math.floor(Math.random() * 100 + 40);
+            $("#mugshot-slider").slider({
+                stop: function(event, ui) {
+                    if (ui.value >= randomNumber) {
+                        displayHighResolutionPhoto();
+                    } else {
+                        $("#mugshot-slider-amount").text("Keep going!");
+                    }
+                },
+                max: randomNumber
+            });
+
+            // replace spinner with the mugshot image
+            var url = "/PAID/Home/MugshotImage/1489454";
+            $("#mugshot-image").load(function () {
+                displayHighResImage(url);
+            });
+
+            if (BrowserDetect.browser == 'Explorer' ||
+                BrowserDetect.browser == 'Firefox' ||
+                BrowserDetect.browser == 'Chrome') {
+                displayHighResImage(url);
+            }
+        });
+
+        function displayHighResolutionPhoto() {
+            var url = "/PAID/Home/HighResolutionMugshotImage/1489454";
+            $("#mugshot-image").attr('src', url);
+            $("#mugshot-image-high-resolution").hide();
+            $("#mugshot-image-back").show();
+            $("#mugshot-slider").hide();
+            $("#mugshot-slider-amount").hide();
+        }
+
+        function displayHighResImage(url) {
+            $("#mugshot-image").unbind('load');
+            $("#mugshot-image").attr('src', url);
+            $("#mugshot-image-high-resolution").delay(5000).show("slow");
+        }
+
+        var BrowserDetect = {
+            init: function() {
+                this.browser = this.searchString(this.dataBrowser) || this.isIE11() || "Other";
+                this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
+            },
+
+            searchString: function(data) {
+                for (var i = 0; i < data.length; i++) {
+                    var dataString = data[i].string;
+                    this.versionSearchString = data[i].subString;
+
+                    if (dataString.indexOf(data[i].subString) != -1) {
+                        return data[i].identity;
+                    }
+                }
+            },
+
+            searchVersion: function(dataString) {
+                var index = dataString.indexOf(this.versionSearchString);
+                if (index == -1) return;
+                return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+            },
+
+            isIE11: function() {
+                var ie11Styles = [
+                    'msTextCombineHorizontal'
+                ];
+                /*
+                 * Test all IE only CSS properties
+                 */
+                var d = document;
+                var b = d.body;
+                var s = b.style;
+                var ieVersion = null;
+                var property;
+
+
+                // Test IE11 properties
+                for (var i = 0; i < ie11Styles.length; i++) {
+                    property = ie11Styles[i];
+
+                    if (s[property] != undefined) {
+                        ieVersion = "ie11";
+
+                    }
+                }
+
+                if (ieVersion) {
+                    return "Explorer";
+                } else {
+                    return "Other";
+                }
+            },
+
+            dataBrowser:
+            [
+                { string: navigator.userAgent, subString: "Chrome", identity: "Chrome" },
+                { string: navigator.userAgent, subString: "MSIE", identity: "Explorer" },
+                { string: navigator.userAgent, subString: "Firefox", identity: "Firefox" },
+                { string: navigator.userAgent, subString: "Safari", identity: "Safari" },
+                { string: navigator.userAgent, subString: "Opera", identity: "Opera" }
+            ]
+        };
+
+    </script>
+
+    </body>
+</html>
