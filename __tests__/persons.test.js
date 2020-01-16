@@ -23,7 +23,7 @@ describe('app routes', () => {
       fullName: 'John Doe',
       age: '39',
       gender: 'male',
-      race: 'white',
+      race: 'White',
       height: '5\' 6"',
       weight: '160 lbs',
       hairColor: 'Brown',
@@ -42,7 +42,7 @@ describe('app routes', () => {
         fullName: 'Jane Doe',
         age: '39',
         gender: 'female',
-        race: 'white',
+        race: 'White',
         height: '5\' 6"',
         weight: '160 lbs',
         hairColor: 'Brown',
@@ -63,18 +63,25 @@ describe('app routes', () => {
       .get(`/api/v1/persons/${person._id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String), 
+          _id: expect.any(String),
           swisId: '12345678',
           fullName: 'John Doe',
           age: '39',
           gender: 'male',
-          race: 'white',
+          race: 'White',
           height: '5\' 6"',
           weight: '160 lbs',
           hairColor: 'Brown',
           eyeColor: 'Green',
           __v: 0
         });
+      });
+  });
+  it('counts intake by race', async() => {
+    return request(app)
+      .get('/api/v1/persons/countByRace')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 'White', 'count': 1 }]);
       });
   });
 });
