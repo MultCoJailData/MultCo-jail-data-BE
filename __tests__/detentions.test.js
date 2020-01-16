@@ -124,7 +124,7 @@ describe('app routes', () => {
     return request(app)
       .get('/api/v1/detentions/countByAgency')
       .then(res => {
-        expect(res.body).toContainEqual([{ '_id': 'Portland Police', 'count': 1 }]);
+        expect(res.body).toEqual([{ '_id': 'Portland Police', 'count': 1 }]);
       });
   });
 });
