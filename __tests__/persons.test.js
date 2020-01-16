@@ -77,6 +77,13 @@ describe('app routes', () => {
         });
       });
   });
+  it('counts intake by age range', async() => {
+    return request(app)
+      .get('/api/v1/persons/countByAgeRange')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': '31', 'count': 1 }]);
+      });
+  });
   it('counts intake by race', async() => {
     return request(app)
       .get('/api/v1/persons/countByRace')
