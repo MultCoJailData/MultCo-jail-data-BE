@@ -27,7 +27,6 @@ describe('app routes', () => {
           status: 'Released'
         }], 
       });
-    console.log(courtCase);
   });
 
   afterAll(() => {
