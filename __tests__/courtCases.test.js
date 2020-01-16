@@ -48,7 +48,7 @@ describe('app routes', () => {
       .get('/api/v1/courtCases')
       .then(res => {
         courtCases.forEach(courtCase => {
-          expect(res.body).toContainEqual(JSON.parse(JSON.stringify(courtCase)));
+          expect(res.body).toContainEqual[(JSON.parse(JSON.stringify(courtCase)))];
         });
       });
   });
@@ -57,7 +57,19 @@ describe('app routes', () => {
     return request(app)
       .get(`/api/v1/courtCases/${courtCase._id}`)
       .then(res => {
-        expect(res.body).toEqual(JSON.parse(JSON.stringify(courtCase)));
+        expect(res.body).toEqual({
+          _id: expect.any(String),
+          caseNumber: '1265543',
+          charges: [{
+            _id: expect.any(String),
+            description: 'Arson',
+            bail: 100,
+            status: 'Released'
+          }], 
+          __v: 0,
+          detention: [],
+          id: expect.any(String)
+        });
       });
   });
 });
