@@ -27,7 +27,6 @@ describe('app routes', () => {
           status: 'Released'
         }], 
       });
-    console.log(courtCase);
   });
 
   afterAll(() => {
@@ -37,7 +36,6 @@ describe('app routes', () => {
   it('gets all courtCases', async() => {
     const courtCases = await CourtCase.create([
       {
-        bookingNumber: '12345679',
         caseNumber: 1265543,
         charges: [{
           description: 'Arson',
@@ -59,18 +57,7 @@ describe('app routes', () => {
     return request(app)
       .get(`/api/v1/courtCases/${courtCase._id}`)
       .then(res => {
-        expect(res.body).toEqual({
-          _id: expect.any(String), 
-          bookingNumber: '12345679',
-          caseNumber: 1265543,
-          charges: [{
-            _id: expect.any(String),
-            description: 'Arson',
-            bail: 100,
-            status: 'Released'
-          }],
-          __v: 0
-        });
+        expect(res.body).toEqual(JSON.parse(JSON.stringify(courtCase)));
       });
   });
 });
