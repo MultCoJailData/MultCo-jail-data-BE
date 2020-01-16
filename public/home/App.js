@@ -19,7 +19,7 @@ class App extends Component {
                     <h3>Routes</h3>
                     <p>Get all persons by gender...</p>
                     <p>female: /persons?gender=Female</p>
-                    <p>male: 
+                    <p>male: /persons?gender=Male</p>
                     <h3>Key</h3>
                 </div>
                 <div class="about">
