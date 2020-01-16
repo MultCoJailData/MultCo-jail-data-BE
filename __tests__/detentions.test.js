@@ -26,7 +26,7 @@ describe('app routes', () => {
 
   beforeEach(async() => {
     bookingState = await BookingState.create({
-      dateAdded: Date.now(),
+      dateAdded: '2019-11-17T10:12:00.000+00:00',
       assignedFacility: 'MCDC',
       caseNumber: '1234567'
     });
@@ -52,7 +52,7 @@ describe('app routes', () => {
 
     detention = await Detention.create({
       bookingNumber: '12345678',
-      bookingDate: '1970-01-01T00:00:02.004Z',
+      bookingDate: Date.now(),
       person: person._id,
       arrestingAgency: 'Portland Police',
       bookingStates: bookingState._id,
@@ -109,7 +109,7 @@ describe('app routes', () => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           bookingNumber: '12345678',
-          bookingDate: '1970-01-01T00:00:02.004Z',
+          bookingDate: '2019-11-17T10:12:00.000+00:00',
           person: person._id,
           arrestingAgency: 'Portland Police',
           bookingStates: [bookingState._id],
@@ -118,6 +118,14 @@ describe('app routes', () => {
           currentCaseState: courtCase._id,
           __v: 0
         });
+      });
+  });
+  it('counts intake by time', async() => {
+    return request(app)
+      .get('/api/v1/detentions/countByTime')
+
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 22, 'count': 1 }]);
       });
   });
   it('counts intake by agency', async() => {
