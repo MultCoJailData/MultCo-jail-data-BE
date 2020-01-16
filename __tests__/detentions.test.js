@@ -35,26 +35,26 @@ describe('app routes', () => {
     detention = await Detention.create({
       bookingNumber: '12345678',
       bookingDate: Date.now(),
-      person: person._id, 
+      person: person._id,
       arrestingAgency: 'Portland Police',
       bookingStates: [
         {
-          type: mongoose.Schema.Types.ObjectId, 
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'BookingState'
         }
       ],
       caseStates: [
         {
-          type: mongoose.Schema.Types.ObjectId, 
+          type: mongoose.Schema.Types.ObjectId,
           ref: 'CourtCase'
         }
       ],
       currentBookingState:     {
-        type: mongoose.Schema.Types.ObjectId, 
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'BookingState'
       },
       currentCaseState:     {
-        type: mongoose.Schema.Types.ObjectId, 
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'CourtCase'
       }
     });
@@ -93,13 +93,20 @@ describe('app routes', () => {
       .get(`/api/v1/detentions/${detention._id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String), 
+          _id: expect.any(String),
           bookingNumber: '12345678',
           description: 'Felony badness',
           bail: '$100',
           status: 'Released',
           __v: 0
         });
+      });
+  });
+  it('counts intake by agency', async() => {
+    return request(app)
+      .get('/api/v1/detentions/countByAgency')
+      .then(res => {
+        expect(res.body).toContainEqual([{ '_id': 'Portland Police', 'count': 1 }]);
       });
   });
 });
