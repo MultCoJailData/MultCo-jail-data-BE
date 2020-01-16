@@ -53,7 +53,7 @@ describe('app routes', () => {
     detention = await Detention.create({
       bookingNumber: '12345678',
       bookingDate: '1970-01-01T00:00:02.004Z',
-      person: person._id, 
+      person: person._id,
       arrestingAgency: 'Portland Police',
       bookingStates: bookingState._id,
       caseStates: courtCase._id,
@@ -74,7 +74,7 @@ describe('app routes', () => {
       {
         bookingNumber: '123678',
         bookingDate: Date.now(),
-        person: person._id, 
+        person: person._id,
         arrestingAgency: 'Portland Police',
         bookingStates: bookingState._id,
         caseStates: courtCase._id,
@@ -84,7 +84,7 @@ describe('app routes', () => {
       {
         bookingNumber: '123568',
         bookingDate: Date.now(),
-        person: person._id, 
+        person: person._id,
         arrestingAgency: 'Portland Police',
         bookingStates: bookingState._id,
         caseStates: courtCase._id,
@@ -107,10 +107,10 @@ describe('app routes', () => {
       .then(res => {
         console.log(res.body);
         expect(res.body).toEqual({
-          _id: expect.any(String), 
+          _id: expect.any(String),
           bookingNumber: '12345678',
           bookingDate: '1970-01-01T00:00:02.004Z',
-          person: person._id, 
+          person: person._id,
           arrestingAgency: 'Portland Police',
           bookingStates: [bookingState._id],
           caseStates: [courtCase._id],
@@ -118,6 +118,13 @@ describe('app routes', () => {
           currentCaseState: courtCase._id,
           __v: 0
         });
+      });
+  });
+  it('counts intake by agency', async() => {
+    return request(app)
+      .get('/api/v1/detentions/countByAgency')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 'Portland Police', 'count': 1 }]);
       });
   });
 });
