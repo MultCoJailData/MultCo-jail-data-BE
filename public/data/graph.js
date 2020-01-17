@@ -37,6 +37,10 @@ const makeCountByTimeChart = async() => {
   };
 
   const data = await getCountByTime();
+  data.map(hourObj => { 
+    hourObj._id = (hourObj._id + 16) % 24; 
+  });
+  data.sort((a, b) =>  a._id - b._id);
   arrayOfData = data.map(function(obj) {
     return Object.keys(obj).sort().map(function(key) {
       return obj[key];
