@@ -1,3 +1,5 @@
+console.log(window.anychart);
+
 let arrayOfData;
 const makeCountByRaceChart = async() => {
 
@@ -24,7 +26,6 @@ const makeCountByRaceChart = async() => {
   // initiate drawing the chart
   chart.draw();
 };
-makeCountByRaceChart();
 
 const makeCountByTimeChart = async() => {
 
@@ -48,4 +49,9 @@ const makeCountByTimeChart = async() => {
   chart.container('timecontainer');
   chart.draw();
 };
-makeCountByTimeChart();
+
+
+export {
+  makeCountByRaceChart, makeCountByTimeChart
+};
+
