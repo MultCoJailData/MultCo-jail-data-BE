@@ -40,12 +40,12 @@ const makeCountByTimeChart = async() => {
   data.map(hourObj => { 
     hourObj._id = (hourObj._id + 16) % 24; 
   });
+  data.sort((a, b) =>  a._id - b._id);
   arrayOfData = data.map(function(obj) {
     return Object.keys(obj).sort().map(function(key) {
       return obj[key];
     });
   });
-  data.sort((a, b) =>  a._id - b._id);
   // eslint-disable-next-line
   const chart = anychart.bar();
   // eslint-disable-next-line
