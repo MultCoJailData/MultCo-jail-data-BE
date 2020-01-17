@@ -1,7 +1,7 @@
 console.log(window.anychart);
 
 let arrayOfData;
-export const makeCharts = async() => {
+const makeCountByRaceChart = async() => {
 
   const getCountByRace = async() => {
     return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons/countbyrace')
@@ -26,7 +26,6 @@ export const makeCharts = async() => {
   // initiate drawing the chart
   chart.draw();
 };
-makeCountByRaceChart();
 
 const makeCountByTimeChart = async() => {
 
@@ -50,4 +49,9 @@ const makeCountByTimeChart = async() => {
   chart.container('timecontainer');
   chart.draw();
 };
-makeCountByTimeChart();
+
+
+export {
+  makeCountByRaceChart, makeCountByTimeChart
+};
+
