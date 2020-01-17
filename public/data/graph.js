@@ -26,3 +26,28 @@ export const makeCharts = async() => {
   // initiate drawing the chart
   chart.draw();
 };
+makeCountByRaceChart();
+
+const makeCountByTimeChart = async() => {
+
+  const getCountByTime = async() => {
+    return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByTime')
+      .then((response) => {
+        return response.json();
+      });
+  };
+
+  const data = await getCountByTime();
+  arrayOfData = data.map(function(obj) {
+    return Object.keys(obj).sort().map(function(key) {
+      return obj[key];
+    });
+  });
+  // eslint-disable-next-line
+  const chart = anychart.bar();
+  // eslint-disable-next-line
+  var series = chart.bar(arrayOfData);
+  chart.container('timecontainer');
+  chart.draw();
+};
+makeCountByTimeChart();

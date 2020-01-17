@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+
 .content-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -6,6 +12,14 @@
     grid-row-gap: 5px;
     width: 95%;
     margin: auto;
+}
+
+body {
+    padding: 3em;
+}
+
+.nick {
+    padding-bottom: -1em;
 }
     
 .routes { 
@@ -45,13 +59,15 @@ table tr td {
 .paths {
     font-weight: normal;
     font-size: 1.25rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'playfair display';
+
+    
 }
 
 header {
 	position: relative;
 	padding: 50px 15px 0 15px;
-	color: #444;
+	color: #3b3a3a;
 	text-align: left;
 	text-shadow: 0 1px 0 rgba(0,0,0,.1);
 	background-color: #A4DFDA;
@@ -60,29 +76,56 @@ header {
 
 h1 {
 	font-size: 85px;
-	line-height: 1.3em;
-	font-weight: bold;
+    line-height: 1.3em;
+    font-family: 'Playfair Display';
+    font-weight: 900;
+    
+    
 }
 
 h2 {
 	font-size: 45px;
 	line-height: 1.3em;
-	margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Playfair Display';
+    
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 50px;
 	line-height: 1.3em;
     margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    font-family: 'Playfair Display';
+    font-weight: 690;
+    text-transform: uppercase;
+    padding-bottom: .5em;
+    padding-top: 1em;
+    color: #dfa4a9;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
+
+
+
 }
 
 p {
-    font-size: 16px;
+    font-size: 1em;
+    font-family: Merriweather;
+    font-weight: 200;
+
 }
 
 a {
  text-decoration: underline;
+ font-family: 'Playfair Display';
+ font-weight: 500;
+}
+
+span {
+    font-family: 'Playfair Display';
+}
+
+li {
+    padding-left: 2em;
 }
 
 
@@ -97,3 +140,11 @@ width: 600px;
 	h1{font-size:36px;}
 	h2{font-size:28px;}
 }
+
+tr {
+    font-family: Lato;
+}
+td {
+    font-family: Lato;
+}
+

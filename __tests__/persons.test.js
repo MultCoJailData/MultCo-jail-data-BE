@@ -64,6 +64,7 @@ describe('app routes', () => {
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
+          id: expect.any(String),
           swisId: '12345678',
           fullName: 'John Doe',
           age: '39',
