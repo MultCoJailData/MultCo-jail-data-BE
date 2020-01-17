@@ -37,11 +37,15 @@ const makeCountByTimeChart = async() => {
   };
 
   const data = await getCountByTime();
+  data.map(hourObj => { 
+    hourObj._id = (hourObj._id + 16) % 24; 
+  });
   arrayOfData = data.map(function(obj) {
     return Object.keys(obj).sort().map(function(key) {
       return obj[key];
     });
   });
+  data.sort((a, b) =>  a._id - b._id);
   // eslint-disable-next-line
   const chart = anychart.bar();
   // eslint-disable-next-line
