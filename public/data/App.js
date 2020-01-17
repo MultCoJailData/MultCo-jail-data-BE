@@ -1,6 +1,6 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
-import { makeCountByRaceChart, makeCountByTimeChart, makeDetentionByRaceChart } from './graph.js';
+import { makeCountByRaceChart, makeCountByTimeChart, makeDurationByRaceChart, makeCountByGenderChart } from './graph.js';
 
 
 class App extends Component {
@@ -11,7 +11,8 @@ class App extends Component {
 
     const chartByRace = makeCountByRaceChart();
     const chartByTime = makeCountByTimeChart();
-    const chartDetByRace = makeDetentionByRaceChart();
+    const chartDurByRace = makeDurationByRaceChart();
+    const countbyGender = makeCountByGenderChart();
   }
 
   renderHTML() {
@@ -23,6 +24,7 @@ class App extends Component {
                 <div id="container"></div>
                 <div id="timecontainer"></div>
                 <div id="durationcontainer"></div>
+                <div id="gendercontainer"></div>
             </div>
         </div>
     `;
