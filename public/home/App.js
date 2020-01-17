@@ -3,7 +3,7 @@ import Header from '../common/Header.js';
 
 
 class App extends Component {
-    
+
   onRender(dom) {
     const header = new Header();
     dom.prepend(header.renderDOM());
@@ -12,7 +12,7 @@ class App extends Component {
   renderHTML() {
     return /*html*/`
         <div>
-            <!-- header goes here --> 
+            <!-- header goes here -->
             <div class="content-container">
                 <div class="routes">
                     <h2>About the API</h2>
@@ -64,7 +64,7 @@ class App extends Component {
                         <span class="routes">Get ALL court cases - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/courtCases" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/courtCases</a>
                         </li>
                     </ul>
-                    
+
                     <h3></h3>
                 </div>
                 <div class="about">
@@ -88,7 +88,7 @@ class App extends Component {
                                 <ul>
                                 <li>age: 24</li>
                                 <li>gender: Male</li>
-                                <li>race: Black</li>
+                                <li>race: White</li>
                                 <li>height: 6 ft 1 in</li>
                                 <li>weight: 160 lbs</li>
                                 <li>hairColor: Brown</li>
@@ -119,13 +119,13 @@ class App extends Component {
                                 </td>
                             </tr>
                         </table>
-                    </div>	
+                    </div>
                 </div>
             </div>
         </div>
     `;
   }
-        
+
 }
 
 export default App;
