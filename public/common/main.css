@@ -34,11 +34,25 @@ body {
     color: #444;
 }
 
+li {
+    padding: 5px;
+}
+
 table tr td {
     border: 1px solid black;
     padding: 15px;
 }
 
+.routes {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.paths {
+    font-weight: normal;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 header {
 	position: relative;
