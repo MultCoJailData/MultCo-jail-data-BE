@@ -18,9 +18,9 @@ class App extends Component {
         <div>
             <!-- header goes here --> 
             <div>
-              <h1>Detentions by Race in Multnomah County</h1>
+              <h2>Detentions by Race in Multnomah County</h2>
                 <div id="container"></div>
-                <div id="timecontainer"></div>
+                <div id="timecontainer" ></div>
             </div>
         </div>
     `;
