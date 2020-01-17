@@ -15,9 +15,9 @@ class Header extends Component {
                     </div>
                     <div class="nav">
                     <ul class="nick">
-                      <li class="api"><a href="../index.html">About the API</a></li>
+                      <li class="api"><a href="../index.html">The API</a></li>
                       <li class="data"><a href="../data.html">See the Data</a></li>
-                      <li class="GitHub"><a href="https://github.com/PanOptiCorp/MCDCdata" class="btn btn-primary btn-large" target="_blank">View On Github</a>
+                      <li class="GitHub"><a href="https://github.com/PanOptiCorp/MCDCdata" class="btn btn-primary btn-large" target="_blank">View on Github</a>
                     </ul>
                   </div>
                 </div>
