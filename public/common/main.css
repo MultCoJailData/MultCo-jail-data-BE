@@ -55,7 +55,7 @@ table tr td {
     border: 1px solid black;
     padding: 15px;
     font-family: Merriweather;
-
+    padding-top: 20px;
 }
 
 .routes {
@@ -78,7 +78,7 @@ header {
     text-align: left;
     text-shadow: 0 1px 0 rgba(0,0,0,.1);
     background-color: #A4DFDA;
-    margin-bottom:60px;
+    margin-bottom:30px;
 }
 
 h1 {
@@ -93,7 +93,7 @@ h2 {
     line-height: 1.3em;
     margin-bottom: 0.5em;
     font-family: 'Playfair Display';
-    
+    padding-top: 1.5em;
 }
 
 h3 {
@@ -140,6 +140,11 @@ width: 600px;
 #timecontainer {
     height: 800px;
     width: 1000px;
+}
+
+#durationcontainer{
+    height: 600px;
+    width: 600px;
 }
 
 a {
