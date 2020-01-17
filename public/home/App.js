@@ -19,38 +19,38 @@ class App extends Component {
                     <ul>
                     <h3>Person Routes</h3>
                         <li>
-                        <span class="routes">Get ALL persons > </span> <span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons
+                        <span class="routes">Get ALL persons - </span> <span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons
                         </li>
                         <li>
-                        <span class="routes">Get count by RACE > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace</span>
+                        <span class="routes">Get count by RACE - </span><span class="paths"> https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by GENDER > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByGender</span>
+                        <span class="routes">Get count by GENDER - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByGender</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGE > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange</span>
+                        <span class="routes">Get count by AGE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange</span>
                         </li>
 
                         <h3>Detention Routes</h3>
                         <li>
-                        <span class="routes">Get ALL detentions > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</span>
+                        <span class="routes">Get ALL detentions - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by RACE > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByRace</span>
+                        <span class="routes">Get count by RACE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByRace</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by GENDER > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByGender</span>
+                        <span class="routes">Get count by GENDER - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByGender</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGE RANGE > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgeRange</span>
+                        <span class="routes">Get count by AGE RANGE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgeRange</span>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGENCY > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgency</span>
+                        <span class="routes">Get count by AGENCY - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgency</span>
                         </li>
 
                         <h3>Charge Routes</h3>
                         <li>
-                        <span class="routes">Get ALL charges > </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/CourtCase</span>
+                        <span class="routes">Get ALL charges - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/CourtCase</span>
                         </li>
                     </ul>
                     
