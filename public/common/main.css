@@ -85,9 +85,7 @@ h1 {
     font-size: 85px;
     line-height: 1.3em;
     font-family: 'Playfair Display';
-    font-weight: 900;
-    
-    
+    font-weight: 900;  
 }
 
 h2 {
@@ -99,23 +97,21 @@ h2 {
 }
 
 h3 {
-    font-size: 50px;
-    line-height: 1.3em;
+	font-size: 50px;
+	line-height: 1.2em;
     margin-bottom: 0.5em;
     font-family: 'Playfair Display';
     font-weight: 690;
     text-transform: uppercase;
     padding-bottom: .5em;
     padding-top: 1em;
-    color: #dfa4a9;
+    color: #3b3a3a;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
-
-
-
 }
 
 p {
     font-size: 1em;
+    line-height: 1.2em;
     font-family: Merriweather;
     font-weight: 200;
 
@@ -144,6 +140,11 @@ width: 600px;
 #timecontainer {
     height: 800px;
     width: 1000px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width:700px){
