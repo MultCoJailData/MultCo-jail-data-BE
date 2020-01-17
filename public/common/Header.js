@@ -8,7 +8,7 @@ class Header extends Component {
               <div class="bs-header">
               <h1>Multnomah County Jail <br>Data
               API</h1>
-                <div class="container">
+                <div class="header-container">
                     <div>
                     </div>
                     <div class="logo">
