@@ -2,7 +2,7 @@ let arrayOfData;
 const makeCharts = async() => {
 
   const getCountByRace = async() => {
-    return fetch('http://localhost:7890/api/v1/persons/countbyrace')
+    return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons/countbyrace')
       .then((response) => {
         return response.json();
       });
