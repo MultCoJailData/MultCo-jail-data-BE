@@ -1,5 +1,7 @@
+console.log(window.anychart);
+
 let arrayOfData;
-const makeCountByRaceChart = async() => {
+export const makeCharts = async() => {
 
   const getCountByRace = async() => {
     return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons/countbyrace')
