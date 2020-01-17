@@ -61,7 +61,7 @@ class App extends Component {
                     <p>Project description</p>
                 </div>
                 <div class="sample-data">
-                    <h4>Sample Booking</h4>
+                    <h4>Sample Detention Record</h4>
                         <table class="table table-hover table-bordered">
                             <tr>
                                 <td><strong>Date:</strong></td>
