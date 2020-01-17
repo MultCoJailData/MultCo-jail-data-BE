@@ -37,8 +37,8 @@ const makeCountByTimeChart = async() => {
   };
 
   const data = await getCountByTime();
-  data.map(hourObj => { 
-    hourObj._id = (hourObj._id + 16) % 24; 
+  data.map(hourObj => {
+    hourObj._id = (hourObj._id + 16) % 24;
   });
   data.sort((a, b) =>  a._id - b._id);
   arrayOfData = data.map(function(obj) {
@@ -54,23 +54,52 @@ const makeCountByTimeChart = async() => {
   chart.draw();
 };
 
+const makeDurationByRaceChart = async() => {
+
+  const getDurationByRace = async() => {
+    return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/detentions/avgDetentionByRace')
+      .then((response) => {
+        return response.json();
+      });
+  };
+
+  const data = await getDurationByRace();
+
+  arrayOfData = data.map(function(obj) {
+    return Object.keys(obj).sort().map(function(key) {
+      return obj[key];
+    });
+  });
+
+  // console.log(arrayOfData);
+
+  // eslint-disable-next-line
+  const chart = anychart.bar();
+  // eslint-disable-next-line
+  var series = chart.bar(arrayOfData);
+  chart.container('durationcontainer');
+  chart.draw();
+};
+
+
 
 
 const makeCountByGenderChart = async() => {
-  
+
   const getCountByGender = async() => {
     return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons//countByGender')
       .then((response) => {
         return response.json();
       });
   };
-  
+
   const data = await getCountByGender();
   arrayOfData = data.map(function(obj) {
     return Object.keys(obj).sort().map(function(key) {
       return obj[key];
     });
   });
+
   // eslint-disable-next-line
   const chart = anychart.bar();
   // create a bar series and set the data
@@ -82,5 +111,5 @@ const makeCountByGenderChart = async() => {
   chart.draw();
 };
 export {
-  makeCountByRaceChart, makeCountByTimeChart, makeCountByGenderChart
+  makeCountByRaceChart, makeCountByTimeChart, makeDurationByRaceChart, makeCountByGenderChart
 };
