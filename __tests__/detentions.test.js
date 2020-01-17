@@ -107,7 +107,7 @@ describe('app routes', () => {
       .then(res => {
         console.log(res.body);
         expect(res.body).toEqual({
-          _id: detention._id,
+          _id: expect.any(String),
           bookingNumber: '12345678',
           bookingDate: '2019-11-17T10:12:00.000+00:00',
           person: person._id,
