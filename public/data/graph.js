@@ -70,7 +70,7 @@ const makeDurationByRaceChart = async() => {
       return obj[key];
     });
   });
-  console.log('for dirt', arrayOfData);
+
   // console.log(arrayOfData);
 
   // eslint-disable-next-line
