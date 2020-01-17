@@ -15,7 +15,7 @@ class App extends Component {
             <!-- header goes here --> 
             <div class="content-container">
                 <div class="routes">
-                    <h2>The API</h2>
+                    <h2><strong>The API</strong></h2>
                     <h3>Routes</h3>
                     <p>Get all persons by gender...</p>
                     <p>female: /persons?gender=Female</p>

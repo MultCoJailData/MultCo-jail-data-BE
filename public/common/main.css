@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap');
+
+
+
 .content-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -37,7 +43,7 @@ table tr td {
 header {
 	position: relative;
 	padding: 50px 15px 0 15px;
-	color: #444;
+	color: #3b3a3a;
 	text-align: left;
 	text-shadow: 0 1px 0 rgba(0,0,0,.1);
 	background-color: #A4DFDA;
@@ -46,31 +52,50 @@ header {
 
 h1 {
 	font-size: 85px;
-	line-height: 1.3em;
-	font-weight: bold;
+    line-height: 1.3em;
+    font-family: 'Playfair Display';
+    font-weight: 700;
 }
 
 h2 {
 	font-size: 45px;
 	line-height: 1.3em;
-	margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Playfair Display';
 }
 
 h3 {
 	font-size: 30px;
 	line-height: 1.3em;
-	margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Lato';
+
 }
 
 p {
-    font-size: 16px;
+    font-size: 1em;
+    font-family: Merriweather;
+    font-weight: 200;
 }
 
 a {
  text-decoration: underline;
+ font-family: 'Playfair Display';
+ font-weight: 500;
+
 }
+
+
 
 @media (max-width:700px){
 	h1{font-size:36px;}
 	h2{font-size:28px;}
 }
+
+tr {
+    font-family: Lato;
+}
+td {
+    font-family: Lato;
+}
+

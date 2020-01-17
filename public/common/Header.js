@@ -6,11 +6,11 @@ class Header extends Component {
     return /*html*/`
             <header>
               <div class="bs-header">
+              <h1>Multnomah County <br>Jail Data<br>API</h1>
                 <div class="container">
                     <div>
                     </div>
                     <div class="logo">
-                        <h2>Multnomah County Jail Data</h2>
                     </div>
                     <div class="nav">
                     <ul>
