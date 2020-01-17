@@ -114,12 +114,34 @@ describe('app routes', () => {
           bookingNumber: '12345678',
           bookingDate: '2019-11-17T10:12:00.000Z',
           releaseDate:'2019-11-19T10:12:00.000Z',
-          person: person._id,
+          person: {
+            _v: 0,
+            _id: expect.any(String),
+            age: '39',
+            gender: 'male',
+            race: 'white',
+            height: '5\' 6"',
+            weight: '160 lbs',
+            hairColor: 'Brown',
+            eyeColor: 'Green'
+          },
           arrestingAgency: 'Portland Police',
           bookingStates: [bookingState._id],
           caseStates: [courtCase._id],
-          currentBookingState: bookingState._id,
-          currentCaseState: courtCase._id,
+          currentCaseState: {
+            _id: expect.any(String),
+            _v: 0,
+            caseNumber: '1234567',
+            charges: expect.any(Array)
+          },
+          currentBookingState: {
+            _id: expect.any(String),
+            _v: 0,
+            dateAdded: expect.any(Date),
+            assignedFacility: 'MCDC',
+            caseNumber: 1234567,
+            detentionId: expect.any(String)
+          },
           __v: 0
         });
       });
