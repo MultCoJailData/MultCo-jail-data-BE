@@ -105,7 +105,6 @@ describe('app routes', () => {
     return request(app)
       .get(`/api/v1/detentions/${detention._id}`)
       .then(res => {
-        console.log(res.body);
         expect(res.body).toEqual({
           _id: expect.any(String),
           bookingNumber: '12345678',
