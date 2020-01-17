@@ -53,7 +53,7 @@ describe('app routes', () => {
       .get('/api/v1/persons')
       .then(res => {
         persons.forEach(person => {
-          expect(res.body).toContainEqual(JSON.parse(JSON.stringify(person)));
+          expect(res.body).toContainEqual([{ '__v': 0, '_id': '5e211985decbb165d97af46c', 'age': '39', 'eyeColor': 'Green', 'gender': 'male', 'hairColor': 'Brown', 'height': '5\' 6"', 'id': '5e211985decbb165d97af46c', 'race': 'White', 'weight': '160 lbs' }, { '__v': 0, '_id': '5e211985decbb165d97af46d', 'age': '39', 'eyeColor': 'Green', 'gender': 'female', 'hairColor': 'Brown', 'height': '5\' 6"', 'id': '5e211985decbb165d97af46d', 'race': 'White', 'weight': '160 lbs' }]);
         });
       });
   });
