@@ -52,7 +52,8 @@ describe('app routes', () => {
 
     detention = await Detention.create({
       bookingNumber: '12345678',
-      bookingDate: Date.now(),
+      bookingDate: '2019-11-17T10:12:00.000+00:00',
+      releaseDate:'2019-11-19T10:12:00.000+00:00',
       person: person._id,
       arrestingAgency: 'Portland Police',
       bookingStates: bookingState._id,
@@ -73,7 +74,8 @@ describe('app routes', () => {
     const detentions = await Detention.create([
       {
         bookingNumber: '123678',
-        bookingDate: Date.now(),
+        bookingDate: '2019-11-17T10:12:00.000+00:00',
+        releaseDate:'2019-11-19T10:12:00.000+00:00',
         person: person._id,
         arrestingAgency: 'Portland Police',
         bookingStates: bookingState._id,
@@ -83,7 +85,8 @@ describe('app routes', () => {
       },
       {
         bookingNumber: '123568',
-        bookingDate: Date.now(),
+        bookingDate: '2019-11-17T10:12:00.000+00:00',
+        releaseDate:'2019-11-19T10:12:00.000+00:00',
         person: person._id,
         arrestingAgency: 'Portland Police',
         bookingStates: bookingState._id,
@@ -109,13 +112,36 @@ describe('app routes', () => {
         expect(res.body).toEqual({
           _id: expect.any(String),
           bookingNumber: '12345678',
-          bookingDate: '2019-11-17T10:12:00.000+00:00',
-          person: person._id,
+          bookingDate: '2019-11-17T10:12:00.000Z',
+          releaseDate:'2019-11-19T10:12:00.000Z',
+          person: {
+            _v: 0,
+            _id: expect.any(String),
+            age: '39',
+            gender: 'male',
+            race: 'white',
+            height: '5\' 6"',
+            weight: '160 lbs',
+            hairColor: 'Brown',
+            eyeColor: 'Green'
+          },
           arrestingAgency: 'Portland Police',
           bookingStates: [bookingState._id],
           caseStates: [courtCase._id],
-          currentBookingState: bookingState._id,
-          currentCaseState: courtCase._id,
+          currentCaseState: {
+            _id: expect.any(String),
+            _v: 0,
+            caseNumber: '1234567',
+            charges: expect.any(Array)
+          },
+          currentBookingState: {
+            _id: expect.any(String),
+            _v: 0,
+            dateAdded: expect.any(Date),
+            assignedFacility: 'MCDC',
+            caseNumber: 1234567,
+            detentionId: expect.any(String)
+          },
           __v: 0
         });
       });
@@ -125,7 +151,7 @@ describe('app routes', () => {
       .get('/api/v1/detentions/countByTime')
 
       .then(res => {
-        expect(res.body).toEqual([{ '_id': 22, 'count': 1 }]);
+        expect(res.body).toEqual([{ '_id': 10, 'count': 1 }]);
       });
   });
   it('counts intake by agency', async() => {
@@ -133,6 +159,27 @@ describe('app routes', () => {
       .get('/api/v1/detentions/countByAgency')
       .then(res => {
         expect(res.body).toEqual([{ '_id': 'Portland Police', 'count': 1 }]);
+      });
+  });
+  it('calculates average detention duration', async() => {
+    return request(app)
+      .get('/api/v1/detentions/avgDetentionDuration')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': null, 'avgDifference': 172800000, }]);
+      });
+  });
+  it('calculates average detention duration by race', async() => {
+    return request(app)
+      .get('/api/v1/detentions/avgDetentionByRace')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 'white', 'avgDifference': 172800000, }]);
+      });
+  });
+  it('calculates average detention duration by gender', async() => {
+    return request(app)
+      .get('/api/v1/detentions/avgDetentionByGender')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 'male', 'avgDifference': 172800000, }]);
       });
   });
 });
