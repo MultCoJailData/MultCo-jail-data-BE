@@ -17,10 +17,14 @@ class App extends Component {
                 <div class="routes">
                     <h2>About the API</h2>
                     <p>The data in this API was collected from the Multnomah County Detention Center's <a href="http://www.mcso.us/PAID/">inmate information page</a>.
+                    <p><span class="queryinfo">All get ALL routes are paged. Use ?page=[page number] and ?perPage=[records per page]</span></p>
                     <ul>
                     <h3>Person Routes</h3>
                         <li>
                         <span class="routes">Get ALL persons - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/persons</a>
+                        </li>
+                        <li>
+                        <span class="routes">Query person subsets by keys, i.e. <a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?race=White" target="_blank">/?race=White</a> or <a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/?gender=Male" target="_blank">/?gender=Male</a>
                         </li>
                         <li>
                         <span class="routes">Get count by RACE - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace" target="_blank">/countByRace</a>
@@ -35,6 +39,9 @@ class App extends Component {
                         <h3>Detention Routes</h3>
                         <li>
                         <span class="routes">Get ALL detentions - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</a>
+                        </li>
+                        <li>
+                        <span class="routes">Query detention subsets by keys, i.e. <a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/?arrestingAgency=Gresham+Police+Department" target="_blank">/?arrestingAgency=Gresham+Police+Department</a>
                         </li>
                         <li>
                         <span class="routes">Get count by AGENCY - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgency" target="_blank">/countByAgency</a>
