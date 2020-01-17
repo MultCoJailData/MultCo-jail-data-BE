@@ -13,7 +13,7 @@ class App extends Component {
     console.log(chartByRace);
     const chartByTime = makeCountByTimeChart();
     const chartDurByRace = makeDurationByRaceChart();
-    console.log(chartDurByRace)
+    console.log(chartDurByRace);
     console.log(chartByTime);
     const countbyGender = makeCountByGenderChart();
     console.log(countbyGender);
