@@ -15,50 +15,61 @@ class App extends Component {
             <!-- header goes here --> 
             <div class="content-container">
                 <div class="routes">
-                    <h2>The API</h2>
+                    <h2>About the API</h2>
+                    <p>The data in this API was collected from the Multnomah County Detention Center's <a href="http://www.mcso.us/PAID/">inmate information page</a>.
                     <ul>
                     <h3>Person Routes</h3>
                         <li>
-                        <span class="routes">Get ALL persons - </span> <span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons
+                        <span class="routes">Get ALL persons - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/persons</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by RACE - </span><span class="paths"> https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace</span>
+                        <span class="routes">Get count by RACE - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByRace" target="_blank">/countByRace</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by GENDER - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByGender</span>
+                        <span class="routes">Get count by GENDER - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByGender" target="_blank">/countByGender</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange</span>
+                        <span class="routes">Get count by AGE - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/persons/countByAgeRange" target="_blank">/countByAgeRange</a>
                         </li>
 
                         <h3>Detention Routes</h3>
                         <li>
-                        <span class="routes">Get ALL detentions - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</span>
+                        <span class="routes">Get ALL detentions - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/detentions</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by RACE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByRace</span>
+                        <span class="routes">Get count by AGENCY - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgency" target="_blank">/countByAgency</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by GENDER - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByGender</span>
+                        <span class="routes">Get count by BOOKING TIME - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByTime" target="_blank">/countByTime</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGE RANGE - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgeRange</span>
+                        <span class="routes">Get average detention DURATION - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/avgDetentionDuration" target="_blank">/avgDetentionDuration</a>
                         </li>
                         <li>
-                        <span class="routes">Get count by AGENCY - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countByAgency</span>
+                        <span class="routes">Get average duration by RACE - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/avgDetentionByRace" target="_blank">/avgDetentionByRace</a>
                         </li>
-
-                        <h3>Charge Routes</h3>
                         <li>
-                        <span class="routes">Get ALL charges - </span><span class="paths">https://mult-co-jail-data.herokuapp.com/api/v1/detentions/CourtCase</span>
+                        <span class="routes">Get average detention by GENDER - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/avgDetentionByGender" target="_blank">/avgDetentionByGender</a>
+                        </li>
+                        <li>
+                        <span class="routes">Get CHARGE count by RACE - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByRace" target="_blank">/countChargesByRace</a>
+                        </li>
+                        <li>
+                        <span class="routes">Get charge count by AGENCY - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByAgency" target="_blank">/countChargesByAgency</a>
+                        </li>
+                        <li>
+                        <span class="routes">Get charge count by GENDER- </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/detentions/countChargesByGender" target="_blank">/countChargesByGender</a>
+                        </li>
+                        <li>
+                        <span class="routes">Get ALL court cases - </span><a class="paths" href="https://mult-co-jail-data.herokuapp.com/api/v1/courtCases" target="_blank">https://mult-co-jail-data.herokuapp.com/api/v1/courtCases</a>
                         </li>
                     </ul>
                     
-                    <h3>Key</h3>
+                    <h3></h3>
                 </div>
                 <div class="about">
-                    <h3>About</h3>
-                    <p>Project description</p>
+                    <h3></h3>
+                    <p></p>
                 </div>
                 <div class="sample-data">
                     <h4>Sample Detention Record</h4>
