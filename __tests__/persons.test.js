@@ -91,4 +91,11 @@ describe('app routes', () => {
         expect(res.body).toEqual([{ '_id': 'White', 'count': 1 }]);
       });
   });
+  it('counts intake by gender', async() => {
+    return request(app)
+      .get('/api/v1/persons/countByGender')
+      .then(res => {
+        expect(res.body).toEqual([{ '_id': 'male', 'count': 1 }]);
+      });
+  });
 });

@@ -7,13 +7,18 @@ class Header extends Component {
             <header>
               <div class="bs-header">
                 <div class="container">
-                    <div class="col-md-6">
+                    <div>
                     </div>
-                    <div class="col-md-6">
-                        <h1>PanOptiCorp</h1>
+                    <div class="logo">
                         <h2>Multnomah County Jail Data</h2>
-                        <p><a href="https://github.com/PanOptiCorp/MCDCdata" class="btn btn-primary btn-large">View On Github</a></p>
                     </div>
+                    <div class="nav">
+                    <ul>
+                      <li class="api"><a class="active" href="../index.html">About the API</a></li>
+                      <li class="data"><a href="../data.html">See the Data</a></li>
+                      <li class="GitHub"><a href="https://github.com/PanOptiCorp/MCDCdata" class="btn btn-primary btn-large">View On Github</a>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </header>
