@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700,800,900&display=swap');
@@ -29,7 +30,11 @@ body {
 .sample-data { 
     grid-area: 1 / 4 / 4 / 6; 
     justify-self: center;
+    font-family: Merriweather;
 }
+
+
+
 .about { 
     grid-area: 4 / 1 / 6 / 6; 
     border: 2px, solid, grey;
@@ -37,7 +42,7 @@ body {
 }
 
 body {
-	margin-top:0px;
+    margin-top:0px;
     font: 16px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
 }
@@ -49,6 +54,8 @@ li {
 table tr td {
     border: 1px solid black;
     padding: 15px;
+    font-family: Merriweather;
+
 }
 
 .routes {
@@ -65,25 +72,25 @@ table tr td {
 }
 
 header {
-	position: relative;
-	padding: 50px 15px 0 15px;
-	color: #3b3a3a;
-	text-align: left;
-	text-shadow: 0 1px 0 rgba(0,0,0,.1);
-	background-color: #A4DFDA;
-	margin-bottom:60px;
+    position: relative;
+    padding: 50px 15px 0 15px;
+    color: #3b3a3a;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #A4DFDA;
+    margin-bottom:60px;
 }
 
 h1 {
-	font-size: 85px;
+    font-size: 85px;
     line-height: 1.3em;
     font-family: 'Playfair Display';
     font-weight: 900;  
 }
 
 h2 {
-	font-size: 45px;
-	line-height: 1.3em;
+    font-size: 45px;
+    line-height: 1.3em;
     margin-bottom: 0.5em;
     font-family: 'Playfair Display';
     
@@ -125,9 +132,14 @@ li {
 }
 
 
-.container {
+#container {
 height: 600px;
 width: 600px;
+}
+
+#timecontainer {
+    height: 800px;
+    width: 1000px;
 }
 
 a {
@@ -136,8 +148,8 @@ a {
 }
 
 @media (max-width:700px){
-	h1{font-size:36px;}
-	h2{font-size:28px;}
+    h1{font-size:36px;}
+    h2{font-size:28px;}
 }
 
 tr {
@@ -146,4 +158,3 @@ tr {
 td {
     font-family: Lato;
 }
-

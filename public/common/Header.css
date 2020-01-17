@@ -1,3 +1,4 @@
+
 h1{
   text-align: center;
   
@@ -38,6 +39,7 @@ h1{
     background-color: #526f6d;
     padding-bottom: .245em;
   }
+   
    
   @media screen and (min-width: 600px) {
     .nav li {
