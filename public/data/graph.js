@@ -55,7 +55,32 @@ const makeCountByTimeChart = async() => {
 };
 
 
-export {
-  makeCountByRaceChart, makeCountByTimeChart
-};
 
+const makeCountByGenderChart = async() => {
+  
+  const getCountByGender = async() => {
+    return fetch('https://mult-co-jail-data.herokuapp.com/api/v1/persons//countByGender')
+      .then((response) => {
+        return response.json();
+      });
+  };
+  
+  const data = await getCountByGender();
+  arrayOfData = data.map(function(obj) {
+    return Object.keys(obj).sort().map(function(key) {
+      return obj[key];
+    });
+  });
+  // eslint-disable-next-line
+  const chart = anychart.bar();
+  // create a bar series and set the data
+  // eslint-disable-next-line
+  var series = chart.bar(arrayOfData);
+  // set the container id
+  chart.container('gendercontainer');
+  // initiate drawing the chart
+  chart.draw();
+};
+export {
+  makeCountByRaceChart, makeCountByTimeChart, makeCountByGenderChart
+};

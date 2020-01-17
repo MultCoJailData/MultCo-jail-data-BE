@@ -1,6 +1,6 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
-import { makeCountByRaceChart, makeCountByTimeChart } from './graph.js';
+import { makeCountByRaceChart, makeCountByTimeChart, makeCountByGenderChart } from './graph.js';
 
 
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
 
     const chartByRace = makeCountByRaceChart();
     const chartByTime = makeCountByTimeChart();
+    const countbyGender = makeCountByGenderChart();
   }
 
   renderHTML() {
@@ -21,6 +22,7 @@ class App extends Component {
               <h1>Detentions by Race in Multnomah County</h1>
                 <div id="container"></div>
                 <div id="timecontainer"></div>
+                <div id="gendercontainer"></div>
             </div>
         </div>
     `;
