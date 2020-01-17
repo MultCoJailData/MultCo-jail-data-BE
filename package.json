@@ -23,6 +23,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "anychart": "^8.7.1",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

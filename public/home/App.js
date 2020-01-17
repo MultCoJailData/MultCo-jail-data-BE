@@ -64,27 +64,46 @@ class App extends Component {
                     <h4>Sample Detention Record</h4>
                         <table class="table table-hover table-bordered">
                             <tr>
-                                <td><strong>Date:</strong></td>
-                                <td>11/07/2019</td>
+                                <td><strong>bookingNumber:</strong></td>
+                                <td>1416074</td>
                             </tr>
                             <tr>
-                                <td><strong>Time:</strong></td>
-                                <td>10:52 PM</td>
+                                <td><strong>bookingTime:</strong></td>
+                                <td>2017-09-24T05:09:00.000Z</td>
                             </tr>
                             <tr>
-                                <td><strong>Agency:</strong></td>
-                                <td>Portland Police, East Precinct</td>
+                                <td><strong>person:</strong></td>
+                                <td>
+                                <ul>
+                                <li>age: 24</li>
+                                <li>gender: Male</li>
+                                <li>race: Black</li>
+                                <li>height: 6 ft 1 in</li>
+                                <li>weight: 160 lbs</li>
+                                <li>hairColor: Brown</li>
+                                <li>eyeColor: Hazel</li>
+                                </ul>
+                                </td>
                             </tr>
                             <tr>
-                                <td><strong>Facility:</strong></td>
+                            <td><strong>arrestingAgency:</strong></td>
+                            <td>Gresham Police Department</td>
+                            </tr>
+                            <tr>
+                                <td><strong>assignedFacility:</strong></td>
                                 <td>MCIJ</td>
                             </tr>
                             <tr>
-                                <td><strong>Charges:</strong></td>
+                                <td><strong>projectedReleaseDate:</strong></td>
+                                <td>Unknown</td>
+                            </tr>
+                            <tr>
+                                <td><strong>charges:</strong></td>
                                 <td>
                                 <ul>
-                                <li>UNLAW USE WEAPN DV (C Felony)</li>
-                                <li>STRANGULATION FEL DV (C Felony)</li>
+                                <li>description: MURDER I (A Felony)</li>
+                                <li>bail: 0</li>
+                                <li>status: Released</li>
                                 </ul>
                                 </td>
                             </tr>

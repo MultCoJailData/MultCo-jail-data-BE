@@ -6,7 +6,7 @@ class Header extends Component {
     return /*html*/`
             <header>
               <div class="bs-header">
-                <div class="container">
+                <div class="header-container">
                     <div>
                     </div>
                     <div class="logo">

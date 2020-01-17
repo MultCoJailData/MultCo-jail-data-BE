@@ -85,6 +85,14 @@ a {
  text-decoration: underline;
 }
 
+
+.container {
+height: 600px;
+width: 600px;
+}
+
+
+
 @media (max-width:700px){
 	h1{font-size:36px;}
 	h2{font-size:28px;}
