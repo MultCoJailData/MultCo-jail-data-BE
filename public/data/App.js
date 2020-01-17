@@ -10,7 +10,9 @@ class App extends Component {
     dom.prepend(header.renderDOM());
 
     const chartByRace = makeCountByRaceChart();
+    console.log(chartByRace);
     const chartByTime = makeCountByTimeChart();
+    console.log(chartByTime);
   }
 
   renderHTML() {
@@ -29,3 +31,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+
