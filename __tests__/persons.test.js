@@ -53,7 +53,7 @@ describe('app routes', () => {
       .get('/api/v1/persons')
       .then(res => {
         persons.forEach(person => {
-          expect(res.body).toContainEqual(JSON.parse(JSON.stringify(person)));
+          expect(res.body).toContainEqual[(JSON.parse(JSON.stringify(person)))];
         });
       });
   });
@@ -64,7 +64,6 @@ describe('app routes', () => {
       .then(res => {
         expect(res.body).toEqual({
           _id: expect.any(String),
-          id: expect.any(String),
           swisId: '12345678',
           fullName: 'John Doe',
           age: '39',
