@@ -109,13 +109,13 @@ describe('app routes', () => {
       .get(`/api/v1/detentions/${detention._id}`)
       .then(res => {
         expect(res.body).toEqual({
-          _id: expect.any(String),
+          _id: detention.id,
           bookingNumber: '12345678',
           bookingDate: '2019-11-17T10:12:00.000Z',
           releaseDate:'2019-11-19T10:12:00.000Z',
           person: {
-            _v: 0,
-            _id: expect.any(String),
+            __v: 0,
+            _id: person.id,
             age: '39',
             gender: 'male',
             race: 'white',
@@ -125,21 +125,21 @@ describe('app routes', () => {
             eyeColor: 'Green'
           },
           arrestingAgency: 'Portland Police',
-          bookingStates: [bookingState._id],
+          bookingStates: [bookingState.id],
           caseStates: [courtCase._id],
           currentCaseState: {
-            _id: expect.any(String),
-            _v: 0,
+            _id: courtCase._id,
+            __v: 0,
             caseNumber: '1234567',
-            charges: expect.any(Array)
+            charges: []
           },
           currentBookingState: {
-            _id: expect.any(String),
-            _v: 0,
-            dateAdded: expect.any(Date),
+            _id: bookingState.id,
+            __v: 0,
+            dateAdded: '2019-11-17T10:12:00.000Z',
             assignedFacility: 'MCDC',
             caseNumber: 1234567,
-            detentionId: expect.any(String)
+            detentionId: detention._id
           },
           __v: 0
         });
