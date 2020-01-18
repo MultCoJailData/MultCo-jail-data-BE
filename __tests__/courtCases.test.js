@@ -68,7 +68,6 @@ describe('app routes', () => {
           }], 
           __v: 0,
           detention: [],
-          id: expect.any(String)
         });
       });
   });
