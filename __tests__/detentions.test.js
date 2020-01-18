@@ -126,9 +126,9 @@ describe('app routes', () => {
           },
           arrestingAgency: 'Portland Police',
           bookingStates: [bookingState.id],
-          caseStates: [courtCase._id],
+          caseStates: [courtCase.id],
           currentCaseState: {
-            _id: courtCase._id,
+            _id: courtCase.id,
             __v: 0,
             caseNumber: '1234567',
             charges: []
@@ -139,7 +139,7 @@ describe('app routes', () => {
             dateAdded: '2019-11-17T10:12:00.000Z',
             assignedFacility: 'MCDC',
             caseNumber: 1234567,
-            detentionId: detention._id
+            detentionId: detention.id
           },
           __v: 0
         });
