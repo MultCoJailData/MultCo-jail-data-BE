@@ -25,20 +25,20 @@ class App extends Component {
             <!-- header goes here -->
             <div>
             <ul>
-                <h2>Current Multnomah County Demographics</h2>
+                <h2>July 2018 Multnomah County Demographics</h2>
                 <br>
-                <li>Total population	4,025,127</li>
-                <li>White	3,586,891</li>
-                <li>Black or African American	112,874</li>
-                <li>American Indian and Alaska Native	125,819</li>
-                <li>Asian	227,382</li>
-                <li>Native Hawaiian and Other Pacific Islander	32,197</li>
-                <li>Hispanic or Latino (of any race)	509,507</li>
-                <li>Other race	140,719</li>
+                <li>Total population 811,880</li>
+                <li>White	alone 79%</li>
+                <li>Black or African American alone	6.1%</li>
+                <li>American Indian and Alaska Native alone	1.4%</li>
+                <li>Asian alone	8.1%</li>
+                <li>Native Hawaiian and Other Pacific Islander alone 0.7%</li>
+                <li>Hispanic or Latino (of any race) 11.7%</li>
+                <li>White alone, not Hispanic or Latino 69.3%</li>
                 </ul>
                 <br>
                 <br>
-              <h2>Detentions by Race in Multnomah County Per 100,000</h2>
+              <h2>Detentions by Race in Multnomah County</h2>
                 <div id="container"></div>
                 <h2>Detention duration by Race in Multnomah County</h2>
                 <div id="durationcontainer"></div>

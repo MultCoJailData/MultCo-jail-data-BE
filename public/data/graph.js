@@ -18,12 +18,12 @@ const makeCountByRaceChart = async() => {
       return obj[key];
     });
   });
-  const staticArray = [['White', 0.3506606139], ['Black', 2.175913486], ['American Indian', 0.4960888375], ['Asian', 0.1155536451], ['Native Hawaiian and Other Pacific Islander', 0.2573693482], ['Other', 0.1103932903]];
+  // const staticArray = [['White', 0.3506606139], ['Black', 2.175913486], ['American Indian', 0.4960888375], ['Asian', 0.1155536451], ['Native Hawaiian and Other Pacific Islander', 0.2573693482], ['Other', 0.1103932903]];
   // eslint-disable-next-line
   const chart = anychart.bar();
   // create a bar series and set the data
   // eslint-disable-next-line
-  var series = chart.bar(staticArray);
+  var series = chart.bar(arrayOfData);
   // set the container id
   chart.container('container');
   // initiate drawing the chart
@@ -114,5 +114,8 @@ const makeCountByGenderChart = async() => {
   chart.draw();
 };
 export {
-  makeCountByRaceChart, makeCountByTimeChart, makeDurationByRaceChart, makeCountByGenderChart
+  makeCountByRaceChart, 
+  makeCountByTimeChart, 
+  makeDurationByRaceChart, 
+  makeCountByGenderChart
 };
