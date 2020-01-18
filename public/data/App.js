@@ -38,7 +38,7 @@ class App extends Component {
                 </ul>
                 <br>
                 <br>
-              <h2>Detentions by Race in Multnomah County</h2>
+              <h2>Detentions by Race in Multnomah County Per 100,000</h2>
                 <div id="container"></div>
                 <h2>Detention duration by Race in Multnomah County</h2>
                 <div id="durationcontainer"></div>
